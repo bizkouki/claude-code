@@ -1,0 +1,31 @@
+# ===== エルメス監視設定 =====
+hermes:
+  # 監視対象リスト（複数指定可）
+  targets:
+    - label: "ミニリンディ"
+      search_url: "https://www.hermes.com/jp/ja/search/?s=ミニ%20リンディ"
+    - label: "エヴリン アマゾーヌ"
+      search_url: "https://www.hermes.com/jp/ja/search/?s=エヴリン%20アマゾーヌ"
+
+  # 商品カードのセレクタ（サイト変更時はここを更新）
+  product_selector: ".product-item"
+  name_selector: ".product-item-name, .product-item-title, h3"
+  # 「在庫なし」を示す要素のセレクタ（存在すれば在庫なし）
+  unavailable_selector: ".product-item--unavailable, [data-availability='false'], .out-of-stock"
+
+# ===== Gmail設定 =====
+gmail:
+  sender: "bizkouki@gmail.com"         # 送信元（自分のGmail）
+  recipients:                           # 送信先（複数指定可）
+    - "gomikouki@gmail.com"
+    - "akari.y85@gmail.com"
+  # キャリアメール例:
+  #   Docomo:   090xxxxxxxx@docomo.ne.jp
+  #   au:       090xxxxxxxx@ezweb.ne.jp
+  #   SoftBank: 090xxxxxxxx@softbank.ne.jp
+
+# ===== チェック間隔 =====
+interval_minutes: 30   # 何分おきにチェックするか（最小5分を推奨）
+
+# ===== デバッグ設定 =====
+debug: true          # true にすると screenshot.png と page.html を保存

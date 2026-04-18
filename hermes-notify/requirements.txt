@@ -1,0 +1,5 @@
+pyyaml==6.0.1
+python-dotenv==1.0.1
+curl-cffi==0.15.0
+beautifulsoup4==4.14.3
+soupsieve==2.8.3
